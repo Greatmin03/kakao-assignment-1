@@ -4,27 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="app-container">
+
+        <!-- 앱 제목 -->
         <h1 class="app-title">Todo App</h1>
 
+        <!-- =========================
+             주간 이동 영역
+             ========================= -->
+        <div class="week-navigation-container">
+
+            <button
+                id="previousWeekButton"
+                class="week-navigation-button"
+            >
+                ◀ 이전 주
+            </button>
+
+            <h2
+                id="weekRangeText"
+                class="week-range-text"
+            >
+                2026-06-02 ~ 2026-06-08
+            </h2>
+
+            <button
+                id="nextWeekButton"
+                class="week-navigation-button"
+            >
+                다음 주 ▶
+            </button>
+
+        </div>
+
+        <!-- =========================
+             주간 날짜 목록
+             ========================= -->
+        <div
+            id="weekDatesContainer"
+            class="week-dates-container"
+        ></div>
+
+        <!-- =========================
+             Todo 입력 영역
+             ========================= -->
         <div class="todo-input-container">
+
             <input
                 type="text"
                 id="todoInput"
                 placeholder="할 일을 입력하세요..."
             >
-            <button id="addTodoButton">추가</button>
+
+            <button id="addTodoButton">
+                추가
+            </button>
+
         </div>
 
-        <p id="messageBox" class="message-box"></p>
+        <!-- 안내 메시지 -->
+        <p
+            id="messageBox"
+            class="message-box"
+        ></p>
 
-        <ul id="todoList" class="todo-list"></ul>
+        <!-- =========================
+             상태 필터
+             ========================= -->
+        <div class="filter-container">
+
+            <button
+                class="filter-button active-filter"
+                data-filter="all"
+            >
+                전체
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="active"
+            >
+                진행 중
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="completed"
+            >
+                완료
+            </button>
+
+        </div>
+
+        <!-- =========================
+             Todo 목록
+             ========================= -->
+        <ul
+            id="todoList"
+            class="todo-list"
+        ></ul>
+
     </div>
 
     <script src="app.js"></script>
+
 </body>
 </html>
